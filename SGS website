@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Star Game Studio — Home</title>
+  <meta name="description" content="Star Game Studio — Indie game studio. Ascendant, The Day Revenge — trailers, devlogs, and studio contact." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="imagesgs/1.webp" alt="SGS Logo" class="logo-image">
+        <div>
+          <h1>Star Game Studio</h1>
+          <div class="small">Indie studio • Unreal & Unity • Cinematic adventures</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#games">Games</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#store">Store</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <div class="tag">ANNOUNCEMENT • 2025</div>
+          <h2>Ascendant: The Legend of Ramayan</h2>
+          <p class="small">A story-driven action-adventure blending ancient myth and modern science. Explore, solve, and fight across a living open world.</p>
+          <div class="hero-cta">
+            <button class="btn-primary" onclick="openModal('ascendant')">Watch Teaser</button>
+            <button class="btn-ghost" onclick="scrollToId('games')">See Games</button>
+          </div>
+        </div>
+        <aside class="hero-right">
+          <img src="imagesgs/6.png" alt="Ascandant-the legend of Ramayan" class="card-thumb">
+          <div class="meta"><span class="small">Studio</span><span class="small">Raipur, Chhattisgarh, India</span></div>
+          <div style="margin-top:12px;display:flex;gap:8px;align-items:center">
+            <div style="flex:1">
+              <div class="small">Next Demo</div>
+              <div style="font-weight:800">Early 2026 • PC (Epic & Steam)</div>
+            </div>
+            <button class="close" onclick="openModal('pitch')">Pitch Deck</button>
+          </div>
+        </aside>
+      </section>
+
+      <section id="about">
+        <div class="grid-3">
+          <div class="card">
+            <h3>About SGS</h3>
+            <p class="small">Star Game Studio is an indie studio focused on cinematic storytelling and modern game mechanics. We combine traditional narratives with procedural techniques to craft immersive worlds.</p>
+          </div>
+          <div class="card">
+            <h3>Our Mission</h3>
+            <p class="small">Build emotionally rich games that connect culturally and compete globally. We value quality, player experience and creative freedom.</p>
+          </div>
+          <div class="card">
+            <h3>Team</h3>
+            <p class="small">Small core team: game dev, artist, sound designer, and producer. Collaborators for VFX and animation.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="games">
+        <h2>Games</h2>
+        <div class="games-grid">
+          <div class="card game-card">
+            <h3>Ascendant: The Legend of Ramayan</h3>
+            <p class="small">Open-world action adventure. Time-bending story, puzzles, and boss fights inspired by Indian epics.</p>
+            <div class="card-actions">
+              <button class="btn-primary" onclick="openModal('ascendant')">Trailer</button>
+              <button class="btn-ghost" onclick="wishlist('Ascendant')">Wishlist</button>
+            </div>
+          </div>
+          <div class="card game-card">
+            <h3>The Day Revenge — Demo</h3>
+            <p class="small">Emotional third-person narrative. Chapter-based demo available on request.</p>
+            <div class="card-actions">
+              <button class="btn-primary" onclick="openModal('dayrevenge')">Play Demo</button>
+              <button class="btn-ghost" onclick="contactStudio()">Request Demo</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-grid">
+          <img src="imagesgs/2.jpg" alt="Temple 1">
+          <img src="imagesgs/3.jpg" alt="Temple 2">
+          <img src="imagesgs/4.jpg" alt="Temple 3">
+          <img src="imagesgs/5.jpg" alt="Temple 4">
+        </div>
+      </section>
+
+      <section id="store">
+        <h2>Store Preview</h2>
+        <div class="store-list">
+          <div class="store-item">
+            <strong>Ascendant — Deluxe Bundle</strong>
+            <div class="small">Early bird bonus: behind-the-scenes artbook</div>
+            <div class="price">₹499 (preorder)</div>
+          </div>
+          <div class="store-item">
+            <strong>The Day Revenge — Demo Access</strong>
+            <div class="small">Support devs with demo access and feedback</div>
+            <div class="price">Free / donation</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contact & Join</h2>
+        <div class="contact-grid">
+          <div>
+            <p class="small">Interested in joining, collaborating, or publishing? Send us a message and portfolio link.</p>
+            <form id="contact-form">
+              <label for="name">Name</label>
+              <input id="name" type="text" required>
+              <label for="email">Email</label>
+              <input id="email" type="email" required>
+              <label for="message">Message</label>
+              <textarea id="message" required></textarea>
+              <div class="form-actions">
+                <button class="btn-primary" type="submit">Send Message</button>
+                <button type="button" class="btn-ghost" onclick="contactStudio()">Email: stargaming21112@gmail.com</button>
+              </div>
+            </form>
+          </div>
+          <aside class="card">
+            <h3>Studio Info</h3>
+            <div class="small">Star Game Studio • Raipur, Chhattisgarh</div>
+            <div style="margin-top:12px">
+              <strong>Follow</strong>
+              <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© Star Game Studio 2025</div>
+      <div class="small">Built with passion • Demo & Pitch-ready</div>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop" id="modal">
+    <div class="modal" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <strong id="modalTitle">Title</strong>
+        <button class="close-modal-btn" onclick="closeModal()">Close</button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        Loading...
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
